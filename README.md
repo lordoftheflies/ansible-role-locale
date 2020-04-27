@@ -37,15 +37,49 @@ Locale is an Ansible Role used to setup and maintain production grade services.
 ## Variables
 
 <p>
-<summary>ansible_role_locale</summary>
+<summary>ansible_role_locale_locales</summary>
 <details>
 
-Locale code.
+List of presented locales, generate if needed.
 
-Default: hu_HU
+Default: []
 
 </details>
 </p>
+
+<p>
+<summary>ansible_role_locale_default_language</summary>
+<details>
+
+Default locale language.
+
+Default value: `en`
+
+</details>
+</p>
+
+<p>
+<summary>ansible_role_locale_default_variant</summary>
+<details>
+
+Default locale variant.
+
+Default value: `US`
+
+</details>
+</p>
+
+<p>
+<summary>ansible_role_locale_default_encoding</summary>
+<details>
+
+Default locale encoding.
+
+Default value: `UTF-8`
+
+</details>
+</p>
+
 
 * [defaults/main.yml](defaults/main.yml) contains all of the required variables.
 
