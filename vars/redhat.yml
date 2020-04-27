@@ -1,4 +1,0 @@
----
-# roles/locale/vars/debian.yml
-
-locale_package_extension: 'rpm'

@@ -31,7 +31,7 @@ rules:
   trailing-spaces: disable
   truthy: disable
   line-length:
-    max: 160
+    max: 200
     level: warning
 ignore: |
   env

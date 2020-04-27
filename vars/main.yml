@@ -1,2 +1,6 @@
 ---
-# roles/locale/vars/main.yml
+ansible_role_locale_locales: []
+ansible_role_locale_default:
+  language:
+  variant:
+  encoding:

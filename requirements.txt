@@ -3,3 +3,4 @@ molecule
 yamllint
 ansible-lint
 docker
+flake8

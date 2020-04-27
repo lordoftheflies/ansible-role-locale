@@ -1,5 +1,4 @@
 ---
-# roles/locale/tasks/main.yml
 
 # Boilerplate tasks
 
@@ -31,3 +30,21 @@
 
 
 # Role tasks
+
+- name: "Ensure a locale exists"
+  locale_gen:
+    name: "{{ item_locale.language }}_{{ item_locale.variant }}.{{ item_locale.encoding | default('UTF-8') }}"
+    state: present
+  with_items: "{{ ansible_role_locale_locales }}"
+  loop_control:
+    loop_var: item_locale
+
+- name: "Set fact default locale"
+  set_fact:
+    ansible_role_locale_default: |
+      - "{{ ansible_role_locale_default_language }}"
+      - "_"
+      - "{{ ansible_role_locale_default_variant }}"
+      - "."
+      - "{{ ansible_role_locale_default_encoding | default('UTF-8') }}"
+  notify: locale generated

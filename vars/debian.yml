@@ -1,5 +1,0 @@
----
-# roles/locale/vars/debian.yml
-
-# Debian specific vars
-locale_package_extension: 'deb'

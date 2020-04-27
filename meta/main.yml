@@ -4,7 +4,7 @@
 dependencies: []
 galaxy_info:
   role_name: 'ansible_role_locale'
-  version: '1.1.0'
+  version: '2.9.0'
   author: 'lordoftheflies'
   description: 'Ansible Galaxy role for maintain Locale.'
   company: 'Cherubits'
