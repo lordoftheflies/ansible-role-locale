@@ -1,0 +1,25 @@
+---
+- name: "Converge"
+  hosts: all
+  become: true
+  vars:
+    - ansible_role_locale_system_user: root
+    - ansible_role_locale_system_group: adm
+    - ansible_role_locale_public: true
+    - ansible_role_locale_secure: true
+    - ansible_role_locale_endpoint_protocol: https
+    - ansible_role_locale_endpoint_host: localhost
+    - ansible_role_locale_endpoint_port: 443
+    - ansible_role_locale_certificate_public_path: /etc/ssl/cert
+    - ansible_role_locale_certificate_private_path: /etc/ssl/private
+    - ansible_role_locale_endpoint_location: /var/www/html
+    - ansible_role_locale_service: apache2
+
+  roles:
+    - ansible-role-locale
+
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+      changed_when: false

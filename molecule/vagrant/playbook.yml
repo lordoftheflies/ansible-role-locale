@@ -1,0 +1,8 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    - locale_deployment_users_home: /home/vagrant
+    - locale_testing_provider: vagrant
+  roles:
+    - locale
