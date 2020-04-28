@@ -15,6 +15,8 @@ Ansible Role for setup locales.
 
 ![GitHub Release Date](https://img.shields.io/github/release-date/lordoftheflies/ansible-role-locale)
 
+[![time tracker](https://wakatime.com/badge/github/lordoftheflies/ansible-role-locale.svg)](https://wakatime.com/badge/github/lordoftheflies/ansible-role-locale)
+
 ## Description
 
 Locale is an Ansible Role used to setup and maintain production grade services.
