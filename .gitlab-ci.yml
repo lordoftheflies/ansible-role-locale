@@ -2,9 +2,9 @@
 default:
   image: python:3
 before_script:
-    - python3 -m venv ../molecule-ve
-    - source ../molecule-ve/bin/activate
-    - pip install -r requirements.txt
+  - python3 -m venv ../molecule-ve
+  - source ../molecule-ve/bin/activate
+  - pip install -r requirements.txt
 test:
     script:
-    - molecule test
+      - molecule test
