@@ -10,7 +10,7 @@
           variant: US
 
   roles:
-    - ansible-role-locale
+    - lordoftheflies.ansible_role_locale
 
   pre_tasks:
     - name: Update apt cache.

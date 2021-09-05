@@ -2,8 +2,7 @@
 - name: Converge
   hosts: all
   vars:
-    - locale_deployment_users_home: /root
-    - locale_testing_provider: lxd
-
+    locale_deployment_users_home: /root
+    locale_testing_provider: lxd
   roles:
-    - locale
+    - lordoftheflies.ansible_role_locale
