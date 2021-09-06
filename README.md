@@ -9,7 +9,7 @@ Ansible Role for setup locales.
 
 ## Status
 
-[![Build Status](https://travis-ci.org/lordoftheflies/ansible-role-locale.svg?branch=master)](https://travis-ci.org/lordoftheflies/ansible-role-locale)
+[![Build Status](https://img.shields.io/github/workflow/status/lordoftheflies/ansible-role-locale/Build%20and%20deploy)
 
 [![Version](https://img.shields.io/github/v/tag/lordoftheflies/ansible-role-locale?sort=semver)](https://github.com/lordoftheflies/ansible-role-locale/releases)
 
