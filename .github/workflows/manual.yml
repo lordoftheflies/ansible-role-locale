@@ -48,7 +48,7 @@ jobs:
       - name: Google Chat Notification
         uses: Co-qn/google-chat-notification@releases/v1
         with:
-          name: Build ${{ github.repository }}
+          name: Build
           url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
           status: ${{ job.status }}
         if: always()
