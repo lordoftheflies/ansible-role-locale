@@ -1,12 +1,12 @@
 ---
-name: Continuos Integration
+name: Build and deploy
 
 on:
   - push
 
 jobs:
   lint:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
   test:
     needs:
       - lint
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         image:
@@ -36,3 +36,12 @@ jobs:
           image: "${{ matrix.image }}"
           options: parallel
           scenario: default
+  release:
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - name: galaxy
+        uses: robertdebock/galaxy-action@1.1.0
+        with:
+          galaxy_api_key: ${{ secrets.galaxy_api_key }}
